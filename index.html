@@ -6,11 +6,133 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="add-your-filename-here.css">
         <title>Credit Card with CSS</title>
+
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Maven Pro', sans-serif;
+                font-size: 62.5%;
+            }
+
+            :root {
+                --width: 100vw;
+                --height: 100vh;
+            }
+
+            .main-div {
+                width: var(--width);
+                height: var(--height);
+                display: grid;
+                place-items: center;
+                background-color: hsl(216, 100%, 94%);
+            }
+
+            .center-div {
+                width: 30rem;
+                height: 18rem;
+                border-radius: 1.6rem;
+                background: linear-gradient(to right, #52b6fe 10%, #6154fe);
+                padding: 3rem;
+                position: relative;
+                box-shadow:
+                    0 0.28rem 0.22rem rgba(0, 0, 0, 0.034),
+                    0 0.67rem 0.53rem rgba(0, 0, 0, 0.048),
+                    0 1.25rem 1rem rgba(0, 0, 0, 0.06),
+                    0 2.23rem 1.79rem rgba(0, 0, 0, 0.072),
+                    0 4.18rem 3.34rem rgba(0, 0, 0, 0.086),
+                    0 10rem 8rem rgba(0, 0, 0, 0.12);
+            }
+
+            .center-div::before {
+                content: ""; 
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 1.6rem;
+                background: linear-gradient(90deg, rgba(1,4,64,1) 4%, rgba(20,1,130,1) 24%, rgba(39,5,185,0.9535) 51%, rgba(0,104,255,1) 75%, rgba(5,145,184,1) 93%);
+                z-index: 1;
+                clip-path: polygon(100% 100%, 100% 0, 0 0, 35% 22%, 54% 56%, 81% 70%);
+                opacity: 0.4;
+            }
+
+
+            .center-div::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 1.6rem;
+                background-image: url('http://st2.depositphotos.com/4202565/7510/v/450/depositphotos_75108665-Slanting-lines-background.jpg');
+                z-index: 1;
+                clip-path: polygon(100% 100%, 100% 0, 0 0, 35% 22%, 54% 56%, 81% 70%);
+                opacity: 0.1;
+            }
+
+            .center-div .top-div {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                color: #fff;
+            }
+
+            .center-div .top-div h2 {
+                font-size: 1.4rem;
+                letter-spacing: 0.2rem;
+                font-weight: 300;
+                z-index: 2;
+            }
+
+            .center-div .top-div h1 {
+                text-transform: uppercase;
+                font-size: 3rem;
+                text-align: right;
+                z-index: 2;
+            }
+
+            .center-div .bottom-div {
+                position: absolute;
+                bottom: 2rem;
+                z-index: 2;
+            }
+
+            .center-div .bottom-div h2 {
+                font-size: 1.5rem;
+                font-weight: 300;
+                text-transform: capitalize;
+                color: #dfe6e9;
+                margin-bottom: 0.5rem;
+                letter-spacing: 0.1rem
+            }
+
+            .center-div .bottom-div p {
+                color: #fff;
+                font-size: 1.5rem;
+            }
+        </style>
     </head>
     <body>
         <div class="main-div">
-            <div class="card">
-
+            <div class="center-div">
+                <div class="top-div">
+                    <h2>Credit</h2>
+                    <h1>Visa</h1>
+                </div>
+                <div class="bottom-div">
+                    <h2>Vinod Thapa</h2>
+                    <p>8484 - 8484 - 8484 - 8484</p>
+                </div>
             </div>
         </div>
     </body>
